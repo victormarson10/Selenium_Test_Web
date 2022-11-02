@@ -22,7 +22,7 @@ public class BaseTest {
 	public static Properties getProp() throws IOException {
 			Properties props = new Properties();
 			FileInputStream file = new FileInputStream(
-				"./src/properties/dados.properties");
+				"dados.properties");
 			props.load(file);
 			return props;
 	}
