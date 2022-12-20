@@ -1,7 +1,5 @@
 package br.mg.vhugo.pages;
 
-import org.openqa.selenium.By;
-
 import br.mg.vhugo.core.BasePage;
 import br.mg.vhugo.core.DriverFactory;
 
@@ -20,13 +18,18 @@ public class LoginPage extends BasePage {
 	}
 	
 	public void entrar() {
-		clicarBotao(By.xpath("//button[@Class='btn btn-primary']"));
+//		clicarBotao(By.xpath("//button[@Class='btn btn-primary']"));
+		clicarBotaoPorTexto("Entrar");
 	}
 	
-//	public void logar(String email, String senha) { -> Método alternativo para logar
+//	public void logar(String email, String senha) { -> Mï¿½todo alternativo para logar
 //		setEmail(email);
 //		setSenha(senha);
 //		entrar();
 //	}
+	
+	public void resetar() {
+		clicarLink("reset");
+	}
 
 }

@@ -1,5 +1,12 @@
 package br.mg.vhugo.core;
 
+import static br.mg.vhugo.core.DriverFactory.getDriver;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -10,16 +17,9 @@ import org.openqa.selenium.TakesScreenshot;
 
 import br.mg.vhugo.pages.LoginPage;
 
-import static br.mg.vhugo.core.DriverFactory.getDriver;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
 public class BaseTest {
 	
-	public static Properties getProp() throws IOException {
+	public /*static por não ser Before não precisa de variáveis estatic*/Properties getProp() throws IOException {
 			Properties props = new Properties();
 			FileInputStream file = new FileInputStream(
 				"dados.properties");
@@ -31,15 +31,15 @@ public class BaseTest {
 	
 	@Rule
 	public TestName testName = new TestName();
-	
+//	Rotinas de abertura do sistema migradas para o teste em suite/ Voltou o comportamento para funcionar com Threads(SureFire)
 	@Before
 	public void inicializa() throws IOException {
 		Properties prop = getProp();
-		String email;
-		String senha;
+//		String email;
+//		String senha;
 		
-		email = prop.getProperty("EMAIL");
-		senha = prop.getProperty("SENHA");
+		String email = prop.getProperty("EMAIL");
+		String senha = prop.getProperty("SENHA");
 		
 		page.acessarTelaInicial();
 		

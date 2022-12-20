@@ -2,9 +2,11 @@ package br.mg.vhugo.core;
 
 public class Propriedades {
 
-	//é importante que após a execução de cada teste o browser seja fechado para que não incorra em sujeira nos outros testes, 
-	//com false isso sempre irá ocorrer
+	//ï¿½ importante que apï¿½s a execuï¿½ï¿½o de cada teste o browser seja fechado para que nï¿½o incorra em sujeira nos outros testes, 
+	//com false isso sempre irï¿½ ocorrer
 	public static boolean FECHAR_BROWSER = true;
+	
+//	public static String NOME_CONTA_ALTERADA = "conta teste alterada321" + System.nanoTime();
 	
 	public static Browsers browser = Browsers.CHROME;
 	
