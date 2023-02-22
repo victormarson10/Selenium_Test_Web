@@ -17,7 +17,7 @@ public class ContaTest extends BaseTest {
 	public void test1_InserirConta() {
 		menuPage.acessarTelaInserirConta();
 		
-		contasPage.setNome("Conta do Teste");
+		contasPage.setNome("Conta do Teste21");
 //		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
 		contasPage.salvar();
 		
