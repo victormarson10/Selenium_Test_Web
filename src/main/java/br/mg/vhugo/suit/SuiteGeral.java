@@ -56,8 +56,8 @@ public class SuiteGeral {
 		page.acessarTelaInicial();
 		
 		
-		page.setEmail("");
-		page.setSenha("");
+		page.setEmail("victor123456@email");
+		page.setSenha("123456");
 		page.entrar();
 		
 		page.resetar();
